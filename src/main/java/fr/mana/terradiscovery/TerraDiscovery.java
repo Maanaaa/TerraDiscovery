@@ -9,7 +9,7 @@ public final class TerraDiscovery extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         PluginInitializer pluginInitializer = new PluginInitializer(this);
-
+        pluginInitializer.initialize();
     }
 
     @Override
