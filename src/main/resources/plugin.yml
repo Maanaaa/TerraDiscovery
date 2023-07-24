@@ -1,0 +1,9 @@
+name: TerraDiscovery
+version: '${project.version}'
+main: fr.mana.terradiscovery.TerraDiscovery
+api-version: '1.20'
+prefix: TerraDiscovery
+softdepend: [WorldGuard]
+authors: [Mana]
+description: A simple plugin of spawn discovery for TerraCraft Server
+website: terracraft.fr
