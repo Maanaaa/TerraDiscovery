@@ -20,6 +20,12 @@ messages:
       - "&7➤ &bvous pouvez y accèder grâce à /warps !"
       - "&a&oVisitez notre boutique /credits pour débloquer tous les warps"
       - " "
+    locked:
+      - "&e&l⚡ &b&lPLAY.TERRACRAFT.FR &e&l⚡"
+      - "&cTu n'as pas encore débloqué cette zone !"
+      - "&cExplore le spawn de TerraCraft pour la découvrir"
+      - "&eOu débloque tous les warps avec /credit !"
+      - " "
     alreadyExist: "&cErreur, cette zone existe déjà !"
 
 

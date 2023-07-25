@@ -20,10 +20,13 @@ public class Discovery implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if(args[0].equalsIgnoreCase("reload")){
-            main.reloadConfig();
-            sender.sendMessage("§eConfiguration rechargée !");
+        if(args.length == 1){
+            if(args[0].equalsIgnoreCase("reload")){
+                main.reloadConfig();
+                sender.sendMessage("§eConfiguration rechargée !");
+            }
         }
+
         if (!(sender instanceof Player)) {
             return false;
         }

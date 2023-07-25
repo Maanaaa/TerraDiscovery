@@ -45,7 +45,10 @@ public class WarpTeleportationListener implements Listener {
             if (!(clickedItem.getType().equals(Material.COMPASS))) {
                 if (clickedItem.getType().equals(Material.RED_STAINED_GLASS)) {
                     player.closeInventory();
-                    player.sendMessage("§cTu n'as pas encore débloqué cette zone ! Explore le spawn de TerraCraft pour la découvrir :) !");
+                    List<String> lines = main.getConfig().getStringList("messages.warps.locked");
+                    for (String line : lines){
+                        player.sendMessage(line);
+                    }
                     return;
                 }
                 return;
