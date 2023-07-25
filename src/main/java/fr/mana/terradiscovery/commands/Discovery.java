@@ -88,9 +88,10 @@ public class Discovery implements CommandExecutor {
             warpSection = main.getConfig().createSection("warps." + warpName);
         }
 
-        warpSection.set("display-name", warpName); // Utilisez warpName comme display-name par défaut
-        warpSection.set("permission", "warps." + warpName); // Utilisez le nom du warp comme permission par défaut
-        warpSection.set("region", warpName + "_rg"); // Utilisez le nom du warp suivi de "_rg" comme nom de région par défaut
+        warpSection.set("display-name", warpName);
+        warpSection.set("permission", "warps." + warpName);
+        warpSection.set("cooldown", "5");
+        warpSection.set("region", warpName + "_rg");
         warpSection.set("x", location.getX());
         warpSection.set("y", location.getY());
         warpSection.set("z", location.getZ());
