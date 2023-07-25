@@ -90,7 +90,7 @@ public class Discovery implements CommandExecutor {
 
         warpSection.set("display-name", warpName);
         warpSection.set("permission", "warps." + warpName);
-        warpSection.set("cooldown", "5");
+        warpSection.set("cooldown", 5);
         warpSection.set("region", warpName + "_rg");
         warpSection.set("x", location.getX());
         warpSection.set("y", location.getY());
