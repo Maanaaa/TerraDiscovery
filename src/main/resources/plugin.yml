@@ -8,8 +8,14 @@ authors: [Mana]
 description: A simple plugin of spawn discovery for TerraCraft Server
 website: terracraft.fr
 commands:
-  terradiscovery:
-    commands: terradiscovery.admin
+  terradiscoveryadmin:
     aliases:
-      - td
-# NOTE: https://dev.bukkit.org/projects/worldguard-region-events
+      - tda
+    permission: terradiscoveryadmin.use
+  zones:
+    permission: terradiscovery.warps
+    aliases:
+      - warps
+      - warp
+      - zone
+      - zones

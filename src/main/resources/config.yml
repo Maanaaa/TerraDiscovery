@@ -3,8 +3,11 @@ messages:
     - "&6TerraDiscovery -- Aide"
     - "&aAliase : /td"
     - " "
-    - "&7&l➤ &b/td reload &f: &7Recharger la configuration "
-    - "&7&l➤ &b/td list &f: &7Voir la liste des zones à découvrir et voir leurs configuration"
+    - "&7&l➤ &b/tda reload &f: &7Recharger la configuration "
+    - "&7&l➤ &b/tda create <nom> &f: &7Créer une nouvelle zone à votre position"
+    - "&7&l➤ &b/tda remove <nom> &: &7Supprimer une zone"
+    - "&7&l➤ &b/tda setspawn <nom> &f: &7Définir la position d'une zone"
+    - "&7&l➤ &b/tda list &f: &7Voir la liste des zones à découvrir et voir leurs configuration"
     - " "
   warps:
     added:
@@ -17,7 +20,7 @@ messages:
       - "&7➤ &bvous pouvez y accèder grâce à /warps !"
       - "&a&oVisitez notre boutique /credits pour débloquer tous les warps"
       - " "
-    alreadyExist: "&cErreur, ce warp existe déjà !"
+    alreadyExist: "&cErreur, cette zone existe déjà !"
 
 
 titles:
@@ -27,7 +30,13 @@ titles:
 
 
 warps:
-  test:
-    display-name: "&6Test"
-    permission: warps.test
-    region: test_rg #The WorldGuard region name
+  #test:
+  #  display-name: "Test"
+  #  permission: warps.test
+  #  region: test_rg #The WorldGuard region name
+  #  cooldown: 5 # Time in second
+  #  x:
+  #  y:
+  #  z:
+  #  pitch:
+  #  yaw:

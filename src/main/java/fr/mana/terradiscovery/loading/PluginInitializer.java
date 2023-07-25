@@ -15,7 +15,9 @@ public class PluginInitializer {
 
     public void initialize(){
         main.saveDefaultConfig();
-        Objects.requireNonNull(main.getCommand("terradiscovery")).setExecutor(new Discovery(main));
+        Objects.requireNonNull(main.getCommand("zones")).setExecutor(new Warps(main));
+        Objects.requireNonNull(main.getCommand("terradiscoveryadmin")).setExecutor(new Discovery(main));
         main.getServer().getPluginManager().registerEvents(new WarpUnlockListener(main), main);
+        main.getServer().getPluginManager().registerEvents(new WarpTeleportationListener(main), main);
     }
 }
