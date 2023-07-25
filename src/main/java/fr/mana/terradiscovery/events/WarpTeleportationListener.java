@@ -57,8 +57,6 @@ public class WarpTeleportationListener implements Listener {
 
             String warpName = getWarpNameFromItem(clickedItem);
             String itemName = itemMeta.getDisplayName();
-            System.out.println("Nom de l'item : " + itemName);
-            System.out.println("Nom du warp : " + warpName);
             if (warpName != null) {
                 teleportPlayerToWarp(player, warpName);
             }
@@ -94,13 +92,14 @@ public class WarpTeleportationListener implements Listener {
                 @Override
                 public void run() {
                     if (player.isOnline()) {
+                        World world = Bukkit.getWorld(Objects.requireNonNull(main.getConfig().getString("warps." + warpName + ".world")));
                         double x = main.getConfig().getDouble("warps." + warpName + ".x");
                         double y = main.getConfig().getDouble("warps." + warpName + ".y");
                         double z = main.getConfig().getDouble("warps." + warpName + ".z");
                         float yaw = main.getConfig().getInt("warps." + warpName + ".yaw");
                         float pitch = main.getConfig().getInt("warps." + warpName + ".pitch");
 
-                        player.teleport(new Location(player.getWorld(), x, y, z, yaw, pitch));
+                        player.teleport(new Location(world, x, y, z, yaw, pitch));
                         player.sendMessage("§aTéléportation réussie vers la zone §7" + displayName);
                     }
                 }
@@ -109,10 +108,11 @@ public class WarpTeleportationListener implements Listener {
             double x = main.getConfig().getDouble("warps." + warpName + ".x");
             double y = main.getConfig().getDouble("warps." + warpName + ".y");
             double z = main.getConfig().getDouble("warps." + warpName + ".z");
+            World world = Bukkit.getWorld(Objects.requireNonNull(main.getConfig().getString("warps." + warpName + ".world")));
             float yaw = main.getConfig().getInt("warps." + warpName + ".yaw");
             float pitch = main.getConfig().getInt("warps." + warpName + ".pitch");
 
-            player.teleport(new Location(player.getWorld(), x, y, z, yaw, pitch));
+            player.teleport(new Location(world, x, y, z, yaw, pitch));
             player.sendMessage("§aTéléportation réussie vers la zone §7" + displayName);
         }
     }

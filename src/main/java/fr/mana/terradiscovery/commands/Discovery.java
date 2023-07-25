@@ -95,6 +95,7 @@ public class Discovery implements CommandExecutor {
         warpSection.set("permission", "warps." + warpName);
         warpSection.set("cooldown", 5);
         warpSection.set("region", warpName + "_rg");
+        warpSection.set("world", location.getWorld());
         warpSection.set("x", location.getX());
         warpSection.set("y", location.getY());
         warpSection.set("z", location.getZ());
@@ -130,6 +131,7 @@ public class Discovery implements CommandExecutor {
         warpSection.set("x", location.getX());
         warpSection.set("y", location.getY());
         warpSection.set("z", location.getZ());
+        warpSection.set("world", location.getWorld());
         warpSection.set("pitch", location.getPitch());
         warpSection.set("yaw", location.getYaw());
 
