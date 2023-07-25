@@ -20,6 +20,10 @@ public class Discovery implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if(args[0].equalsIgnoreCase("reload")){
+            main.reloadConfig();
+            sender.sendMessage("§eConfiguration rechargée !");
+        }
         if (!(sender instanceof Player)) {
             return false;
         }
@@ -32,10 +36,6 @@ public class Discovery implements CommandExecutor {
             String subCommand = args[0].toLowerCase();
 
             switch (subCommand) {
-                case "reload":
-                    main.reloadConfig();
-                    player.sendMessage("§eConfiguration rechargée !");
-                    break;
                 case "list":
                     listWarps(player);
                     break;
