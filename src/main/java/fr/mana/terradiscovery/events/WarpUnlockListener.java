@@ -15,7 +15,6 @@ import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 import java.util.*;
 
 public class WarpUnlockListener implements Listener {
-
     private TerraDiscovery main;
 
     public WarpUnlockListener(TerraDiscovery main) {
@@ -40,13 +39,6 @@ public class WarpUnlockListener implements Listener {
         }
 
     }
-
-
-
-
-
-
-
 
     public void unlockWarp(Player player, String regionName){
         String warpDisplayName = Objects.requireNonNull(main.getConfig().getString("warps." + regionName + ".display-name")).replace("&","§");

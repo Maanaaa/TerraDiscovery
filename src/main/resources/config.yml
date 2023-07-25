@@ -4,6 +4,7 @@ messages:
     - "&aAliase : /td"
     - " "
     - "&7&l➤ &b/td reload &f: &7Recharger la configuration "
+    - "&7&l➤ &b/td list &f: &7Voir la liste des zones à découvrir et voir leurs configuration"
     - " "
   warps:
     added:
@@ -30,4 +31,3 @@ warps:
     display-name: "&6Test"
     permission: warps.test
     region: test_rg #The WorldGuard region name
-
