@@ -34,7 +34,6 @@ public class Warps implements CommandExecutor {
                 Material itemMaterial;
                 String itemDisplayName;
 
-                // Vérifie si le joueur a la permission pour ce warp
                 assert permission != null;
                 if (player.hasPermission(permission)) {
                     itemMaterial = Material.COMPASS;
