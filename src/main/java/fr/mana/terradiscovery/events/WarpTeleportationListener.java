@@ -48,7 +48,7 @@ public class WarpTeleportationListener implements Listener {
                     List<String> lines = main.getConfig().getStringList("messages.warps.locked");
                     for (String line : lines){
                         String lineEdited = line.replace("&","§");
-                        player.sendMessage(line);
+                        player.sendMessage(lineEdited);
                     }
                     return;
                 }
