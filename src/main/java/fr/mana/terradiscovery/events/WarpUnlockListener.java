@@ -34,12 +34,19 @@ public class WarpUnlockListener implements Listener {
                 String warpDisplayName = Objects.requireNonNull(main.getConfig().getString("warps." + regionName + ".display-name")).replace("&","§");
                 assert warpPermission != null;
                 if (!player.hasPermission(warpPermission)) {
-                    unlockWarp(player, warpDisplayName);
+                    unlockWarp(player, regionName);
                 }
             }
         }
 
     }
+
+
+
+
+
+
+
 
     public void unlockWarp(Player player, String regionName){
         String warpDisplayName = Objects.requireNonNull(main.getConfig().getString("warps." + regionName + ".display-name")).replace("&","§");
@@ -49,6 +56,8 @@ public class WarpUnlockListener implements Listener {
     public void addWarpToPlayer(Player player, String warpPermission, String warpDisplayName){
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lp user "+player.getDisplayName()+" permission set "+warpPermission+" true");
         sendUnlockTitle(player, warpDisplayName);
+        sendUnlockMessage(player, warpDisplayName);
+        playSound(player, Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
     }
 
     public void sendUnlockTitle(Player player, String warpDisplayName){
@@ -57,4 +66,15 @@ public class WarpUnlockListener implements Listener {
         player.sendTitle(titleFirstLine,titleSecondLine, 10, 70, 20);
     }
 
+    public void sendUnlockMessage(Player player, String warpDisplayName){
+        List<String> lines = main.getConfig().getStringList("messages.warps.unlocked");
+        for (String line : lines){
+            String lineEdited = line.replace("&","§");
+            player.sendMessage(lineEdited);
+        }
+    }
+
+    public void playSound(Player player, Sound sound, float volume, float pitch) {
+        player.playSound(player.getLocation(), sound, volume, pitch);
+    }
 }

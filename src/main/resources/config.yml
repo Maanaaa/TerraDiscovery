@@ -1,31 +1,33 @@
-database:
-  host:
-  name:
-  user:
-  port:
-  password:
 messages:
   help:
     - "&6TerraDiscovery -- Aide"
     - "&aAliase : /td"
     - " "
-    - "&7&l➤ &b/td addwarp &a<nom du warp> &f: &7Ajouter une nouvelle zone à découvrir "
-    - "&7&l➤ &b/td setregion &a<nom du warp> &a<région worldguard> &f: &7Définit la région worldguard du warp"
-    - "&7&l➤ &b/td setdisplayname &a<nom du warp> &a<nom d'affichage du warp> &f: &7Définit le nom d'affichage du warp"
+    - "&7&l➤ &b/td reload &f: &7Recharger la configuration "
     - " "
   warps:
     added:
       - "&7&l&7&l➤ &bVous avez créé le warp &7%warp_name% &b!"
+    unlocked:
+      - "&e&l⚡ &b&lPLAY.TERRACRAFT.FR &e&l⚡"
+      - " "
+      - "&e&l✪ &7&lNouvelle zone débloquée ! &e&l✪"
+      - "&7➤ &bFéliciation ! Vous avez débloqué une nouvelle zone !"
+      - "&7➤ &bvous pouvez y accèder grâce à /warps !"
+      - "&a&oVisitez notre boutique /credits pour débloquer tous les warps"
+      - " "
     alreadyExist: "&cErreur, ce warp existe déjà !"
-
-warps:
-#  test:
-#    display-name: "&6Test"
-#    permission: warps.test
-#    region: test_rg
 
 
 titles:
   unlocked:
     firstLine: "&e&lNouvelle zone débloquée !"
     secondLine: "&fVous avez débloqué la zone : %warpDisplayName%"
+
+
+warps:
+  test:
+    display-name: "&6Test"
+    permission: warps.test
+    region: test_rg #The WorldGuard region name
+

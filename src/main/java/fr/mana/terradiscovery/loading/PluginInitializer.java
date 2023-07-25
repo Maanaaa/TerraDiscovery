@@ -18,7 +18,4 @@ public class PluginInitializer {
         Objects.requireNonNull(main.getCommand("terradiscovery")).setExecutor(new Discovery(main));
         main.getServer().getPluginManager().registerEvents(new WarpUnlockListener(main), main);
     }
-
-
-
 }
