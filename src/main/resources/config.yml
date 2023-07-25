@@ -4,3 +4,28 @@ database:
   user:
   port:
   password:
+messages:
+  help:
+    - "&6TerraDiscovery -- Aide"
+    - "&aAliase : /td"
+    - " "
+    - "&7&l➤ &b/td addwarp &a<nom du warp> &f: &7Ajouter une nouvelle zone à découvrir "
+    - "&7&l➤ &b/td setregion &a<nom du warp> &a<région worldguard> &f: &7Définit la région worldguard du warp"
+    - "&7&l➤ &b/td setdisplayname &a<nom du warp> &a<nom d'affichage du warp> &f: &7Définit le nom d'affichage du warp"
+    - " "
+  warps:
+    added:
+      - "&7&l&7&l➤ &bVous avez créé le warp &7%warp_name% &b!"
+    alreadyExist: "&cErreur, ce warp existe déjà !"
+
+warps:
+#  test:
+#    display-name: "&6Test"
+#    permission: warps.test
+#    region: test_rg
+
+
+titles:
+  unlocked:
+    firstLine: "&e&lNouvelle zone débloquée !"
+    secondLine: "&fVous avez débloqué la zone : %warpDisplayName%"

@@ -7,3 +7,9 @@ softdepend: [WorldGuard]
 authors: [Mana]
 description: A simple plugin of spawn discovery for TerraCraft Server
 website: terracraft.fr
+commands:
+  terradiscovery:
+    commands: terradiscovery.admin
+    aliases:
+      - td
+# NOTE: https://dev.bukkit.org/projects/worldguard-region-events

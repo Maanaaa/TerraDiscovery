@@ -11,9 +11,4 @@ public final class TerraDiscovery extends JavaPlugin {
         PluginInitializer pluginInitializer = new PluginInitializer(this);
         pluginInitializer.initialize();
     }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
 }
