@@ -49,7 +49,7 @@ public class Discovery implements CommandExecutor {
                     }
 
                     String warpToCreate = args[1].toLowerCase();
-                    createWarp(warpToCreate, player.getLocation());
+                    createWarp(warpToCreate, player.getLocation(), player.getWorld().getName());
                     player.sendMessage("§eLe warp " + warpToCreate + " a été créé à votre position actuelle !");
                     break;
                 case "remove":
@@ -84,7 +84,7 @@ public class Discovery implements CommandExecutor {
         return true;
     }
 
-    private void createWarp(String warpName, Location location) {
+    private void createWarp(String warpName, Location location, String world) {
         ConfigurationSection warpSection = main.getConfig().getConfigurationSection("warps." + warpName);
 
         if (warpSection == null) {
@@ -95,7 +95,7 @@ public class Discovery implements CommandExecutor {
         warpSection.set("permission", "warps." + warpName);
         warpSection.set("cooldown", 5);
         warpSection.set("region", warpName + "_rg");
-        warpSection.set("world", location.getWorld());
+        warpSection.set("world", world);
         warpSection.set("x", location.getX());
         warpSection.set("y", location.getY());
         warpSection.set("z", location.getZ());

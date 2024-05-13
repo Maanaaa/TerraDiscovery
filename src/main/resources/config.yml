@@ -41,6 +41,7 @@ warps:
   #  permission: warps.test
   #  region: test_rg #The WorldGuard region name
   #  cooldown: 5 # Time in second
+  #  world : example_world
   #  x:
   #  y:
   #  z:
