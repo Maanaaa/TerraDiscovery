@@ -20,12 +20,6 @@ public class Discovery implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if(args.length == 1){
-            if(args[0].equalsIgnoreCase("reload")){
-                main.reloadConfig();
-                sender.sendMessage("§eConfiguration rechargée !");
-            }
-        }
 
         if (!(sender instanceof Player)) {
             return false;
@@ -36,6 +30,8 @@ public class Discovery implements CommandExecutor {
         if (args.length == 0) {
             sendHelpMessages(player);
         } else {
+
+
             String subCommand = args[0].toLowerCase();
 
             switch (subCommand) {
@@ -77,7 +73,14 @@ public class Discovery implements CommandExecutor {
                     break;
 
                 default:
-                    sendHelpMessages(player);
+                    if(args[0].equalsIgnoreCase("reload")){
+                        main.reloadConfig();
+                        sender.sendMessage("§eConfiguration rechargée !");
+                    }
+                    else{
+                        sendHelpMessages(player);
+                    }
+
                     break;
             }
         }
